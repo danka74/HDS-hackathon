@@ -1,20 +1,20 @@
-id: hl7.fhir.eu.ig-empty
-canonical: https://hl7.eu/fhir/ig-empty
-name: IGEmpty
-title: Empty IG
-description: An empty Implementation Guide to be used as a starting point for building HL7 EU Implementation Guides
+id: hds-hackathon.electronichealth.se
+canonical: https://electronichealth.se/hds-hackathon
+name: Hackathon Example IG
+title: Hackathon Example IG
+description: An Implementation Guide with examples for the Health Data Sweden Hackathon
 status: draft # draft | active | retired | unknown
-experimental: false
+experimental: true
 version: 0.1.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 #fhirVersion: 4.3.0 # https://www.hl7.org/fhir/valueset-FHIR-version.html
-copyrightYear: 2023+
+copyrightYear: 2025+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 license: CC-BY-SA-3.0-IGO # https://www.hl7.org/fhir/valueset-spdx-license.html
-jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World" # https://www.hl7.org/fhir/valueset-jurisdiction.html
+jurisdiction: urn:iso:std:iso:3166#SE
 publisher:
-  name: HL7 EU
-  url: http://hl7.eu
+  name: HDS
+  url: http://hds-hackathon.se
   # email: test@example.org
 
 dependencies:
@@ -27,24 +27,9 @@ dependencies:
   # See the zulip thread here: https://chat.fhir.org/#narrow/stream/215610-shorthand/search/transitive
   hl7.terminology: 5.5.0
   hl7.fhir.uv.extensions.r4: 5.1.0
-  hl7.fhir.uv.cql: 1.0.0
-  hl7.fhir.uv.crmi: 1.0.0
-  hl7.fhir.uv.sdc: 3.0.0
-  hl7.fhir.uv.cpg: 2.0.0
-  hl7.fhir.us.cqfmeasures: 5.0.0
   # Actual dependencies
-  smart.who.int.base:
-    id: sb
-    version: 0.1.0
-    reason: This IG uses SMART base computable guideline capabilities
-  smart.who.int.base-clinical:
-    id: sbc
-    version: dev
-    reason: This IG uses SMART base clinical capabilities
+  hl7se.fhir.base: 1.0.0
 
-meta:
-  profile:
-    - http://smart.who.int/base/StructureDefinition/SGImplementationGuide
 
 pages:
   index.md:
